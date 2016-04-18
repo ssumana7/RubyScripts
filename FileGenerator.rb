@@ -33,7 +33,6 @@ def updateXMLSuite(token, str)
 	suite_template = File.open("template_testsuites.xml", 'r')
 	replaceStr = suite_template.read()
 	replaceStr = replaceStr.gsub(token, str)
-	puts "test replace str - #{replaceStr}"
 	suite_template.close()
 	suite = File.open("testsuites.xml", 'w')
 	
@@ -47,12 +46,12 @@ end
 
 
 ishpExists = false
-File.open("widgets.csv", 'r').each_line do |line|
+File.open("widgets1.csv", 'r').each_line do |line|
 		widgets = line.split(',')
 		url = widgets[2].delete("\n")
 
-		fname_img = "/Users/SumanaKalyan/src/RubyScripts/testcases/Widget_JSON_#{widgets[0]}_#{widgets[1]}.xml"
-		fname_hp = "/Users/SumanaKalyan/src/RubyScripts/testcases/Widget_installation_#{widgets[0]}.xml"
+		fname_img = "/Users/SumanaKalyan/src/RubyScripts/testcases1/Widget_JSON_#{widgets[0]}_#{widgets[1]}.xml"
+		fname_hp = "/Users/SumanaKalyan/src/RubyScripts/testcases1/Widget_installation_#{widgets[0]}.xml"
 		
 		generate_testcase("template_testcase.xml", fname_img, widgets[0], widgets[1],url)
 		generate_testcase("template_testcase_homepage.xml", fname_hp, widgets[0],widgets[1],url)      
