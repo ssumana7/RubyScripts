@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rpTestSuites>
+	<rpTestSuite name="Widget_installation" description="Testing Widgets on external websites" >
+		__widgets_testcases_homepage__
+	</rpTestSuite>
+	<rpTestSuite name="Widget_JSON" description="Testing Widgets on external websites" >
+		__widgets_testcases_json__
+	</rpTestSuite>
+	<rpTestSuite name="LIWI_Suite" description = "Liwi Automation" owner="sumana@readypulse.com" priority="1" />
+	<rpTestSuite name="Catalog_Suite" description = "Catalog Upload" owner="sumana@readypulse.com" priority="1" />
+</rpTestSuites>	

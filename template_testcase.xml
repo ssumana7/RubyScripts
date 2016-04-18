@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- NOTE: Using complete website url in the <uri> -->
+<rpTestCase owner="sumana@readypulse.com">
+	<description>Testing Feed Widgets</description>
+	<runTest>
+  <step>
+		<uri>http://widgets.readypulse.com/api/v1/widgets/__URL__.json</uri>
+		<description>__NAME__ StoryURL</description>
+		<expectations>
+			<expectation>
+				<method>check_StoryUrl</method>
+				<actual>200 OK</actual>
+			  <expected>false</expected>
+			</expectation>
+		</expectations>
+	</step>
+	<step>
+		<uri>http://widgets.readypulse.com/api/v1/widgets/__URL__.json</uri>
+		<description>__NAME__ Media Images</description>
+		<expectations>
+			<expectation>
+				<method>check_images</method>
+				<actual>media</actual>
+			  <expected>null</expected>
+			</expectation>
+		</expectations>
+	</step>
+	<step>
+		<uri>http://widgets.readypulse.com/api/v1/widgets/__URL__.json</uri>
+		<description>__NAME__ Product Images</description>
+		<expectations>
+			<expectation>
+				<method>check_images</method>
+				<actual>product</actual>
+			  <expected>null</expected>
+			</expectation>
+		</expectations>
+	</step>
+	<step>
+		<uri>http://widgets.readypulse.com/api/v1/widgets/__URL__.json</uri>
+		<description>__NAME__ Cloudinary Images</description>
+		<expectations>
+			<expectation>
+				<method>check_images</method>
+				<actual>cloudinary</actual>
+			  <expected>null</expected>
+			</expectation>
+		</expectations>
+	</step>
+	</runTest>
+</rpTestCase>
