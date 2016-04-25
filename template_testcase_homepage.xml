@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!-- NOTE: Using complete website url in the <uri> -->
+<rpTestCase owner="sumana@readypulse.com">
+    <description>Check Feed Widgets</description>
+    <runTest>
+
+        <step>
+            <uri>__URL__</uri>
+            <description>Check widget __NAME__</description>
+            <expectations>
+                <expectation>
+                    <method>count_greater_than</method>
+                    <actual>//iframe[@class="rpw"]</actual>
+                    <expected>1</expected>
+                </expectation>
+                <expectation>
+                    <method>check_attribute_value</method>
+                    <actual>//script</actual>
+                    <expected>src</expected>
+                </expectation>
+                <expectation>
+                    <method>check_attribute_value</method>
+                    <actual>//iframe[@class="rpw"]</actual>
+                    <expected>data-src</expected>
+                </expectation>   
+            </expectations>
+        </step>
+
+    </runTest>
+</rpTestCase>
